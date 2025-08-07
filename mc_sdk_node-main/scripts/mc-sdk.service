@@ -1,0 +1,16 @@
+[Unit]
+Description=MC SDK Node Service
+After=network.target
+
+[Service]
+Type=simple
+User=firefly
+Group=firefly
+WorkingDirectory=/home/firefly/mc_sdk_node-main
+ExecStart=/bin/bash -c 'source install/setup.bash && exec ros2 launch mc_sdk_node mc_sdk_node.launch.py'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

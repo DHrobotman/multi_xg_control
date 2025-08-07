@@ -1,0 +1,5 @@
+builtin_interfaces/Time stamp
+uint32 control_mode
+uint32 motion_mode
+geometry_msgs/Vector3 cmd_vel
+geometry_msgs/Vector3 cmd_angular
